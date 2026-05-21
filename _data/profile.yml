@@ -8,11 +8,11 @@ positions:
   logo: /assets/images/badges/MIT_Social_circle.png  # Logo is optional
 
 
-email: "your@email.com"
+email: "jinyang.wang27@outlook.com"
 # cv_link: link-to-your-cv-file
 gscholar: xFmQpf4AAAAJ  # This is an example, replace it with your own Google Scholar ID
-github: your_github_id
-twitter: your_twitter_id  # Do not include the '@' symbol
+github: JinyangWang27
+# twitter: your_twitter_id  # Do not include the '@' symbol
 # wechat_qrcode: /assets/images/etc/wechat.jpg
 # wechat_prompt: >-
 #   Please tell me your <strong>name</strong> and <strong>affiliation</strong> (current or past) when adding my wechat. Thanks!
@@ -35,27 +35,23 @@ portrait_caption: >-
   Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
 
 education:
-- name: Massachusetts Institute of Technology
-  logo: /assets/images/badges/MIT_Social_circle.png
+- name: Utrecht University
+  logo: /assets/images/badges/Utrecht_University.png
   position: >- 
-    Department of Electrical Engineering and Computer Science <br/>
+    Department of Physics <br/>
     Ph.D. Student
-  date: Sep. 2024 - present
-- name: Peking University
+  date: Mar. 2018 - May. 2022
+- name: University of Exeter
   logo: /assets/images/badges/PKU_red.png
-  position: B.S. in Computer Science
-  date: Sep. 2019 - Jul. 2021
+  position: M.Sc. in Mathematics
+  date: Sep. 2016 - Aug. 2017
+- name: University of Liverpool
+  logo: /assets/images/badges/uol.png
+  position: B.Sc. in Applied Mathematics
+  date: Sep. 2011 - Aug. 2016
 
 # experience:
 # - name: Peking University
 #   logo: /assets/images/badges/PKU_red.png
 #   position: Research Intern
 #   date: Sep. 2019 - Jul. 2021
-
-awards:
-- name: Award Name 2
-  date: 2024
-- name: Award Name 1 
-  date: 2021
-- name: A quick brown fox jumps over the lazy dog and runs away award
-  date: 2021
