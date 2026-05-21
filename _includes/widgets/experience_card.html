@@ -67,6 +67,27 @@
                     </div>
                     {% endif %}
 
+                    {% if site.data.profile.peer_reviews %}
+                    <div class="col-lg-6">
+                        <div class="mx-2 my-1">
+                            <h6>Peer Review</h6>
+                            <ul class="list-unstyled small mb-1">
+                                {% for item in site.data.profile.peer_reviews %}
+                                <li class="mb-1">
+                                    <div class="d-flex">
+                                        <div>
+                                            <em>{{ item.journal }}</em>{% if item.publisher %} <span class="text-muted">— {{ item.publisher }}</span>{% endif %}
+                                            {% if item.count %}<span class="badge badge-pill peer-review-count ml-1">&times;{{ item.count }}</span>{% endif %}
+                                        </div>
+                                        <div class="ml-auto mt-auto no-break"><em>{{ item.date }}</em></div>
+                                    </div>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    {% endif %}
+
                 </div>
 
             </div>

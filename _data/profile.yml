@@ -75,3 +75,13 @@ experience:
   logo: /assets/images/badges/rabo.png
   position: Quantitative Researcher / Treasury Modeller
   date: Oct. 2022 - Sep. 2025
+
+peer_reviews:
+- journal: Environmental Fluid Mechanics
+  publisher: Springer Nature
+  count: 2
+  date: 2022
+- journal: Ocean Engineering
+  publisher: Elsevier
+  count: 1
+  date: 2026

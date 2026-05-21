@@ -742,3 +742,14 @@ body.site-body ::selection {
     background: rgba(0, 229, 204, 0.35);
     color: #ffffff;
 }
+
+/* Peer review count badge ------------------------------------ */
+.peer-review-count {
+    background: linear-gradient(135deg, rgba(0, 229, 204, 0.22), rgba(124, 92, 255, 0.28));
+    border: 1px solid var(--ai-glass-border-strong);
+    color: #eafffb;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.15em 0.55em;
+    letter-spacing: 0.02em;
+}
