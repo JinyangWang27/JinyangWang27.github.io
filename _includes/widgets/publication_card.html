@@ -1,14 +1,67 @@
 {% assign publications = include.publications %}
-<div class="my-3 p-0 bg-white shadow-sm rounded-xl">
-    <h6 class="border-bottom border-gray p-3 mb-0">
-        {% if include.title %}{{ include.title }}{% else %}<i class="fas fa-star"></i> Selected Recent Publications{% endif %} 
-        <a href="{{ 'publications' | relative_url }}">(view all <i class="fas fa-angle-double-right"></i>)</a>
-    </h6>
-    {% for item in publications limit:include.limit %}
-        {% include widgets/publication_item.html item=item first=false last=false %}    
-    {% endfor %}
+<div class="my-3 selected-pubs-card shadow-sm">
+
+    <h5 class="border-bottom border-gray p-3 mb-0 selected-pubs-title">
+        {% if include.title %}{{ include.title }}{% else %}<i class="fas fa-star"></i> Selected Publications{% endif %}
+        <a href="{{ 'publications' | relative_url }}" class="selected-pubs-viewall">(view all <i class="fas fa-angle-double-right"></i>)</a>
+    </h5>
+
+    <div class="p-3">
+        {% for item in publications limit:include.limit %}
+        <div class="selected-pub-item d-flex flex-column flex-md-row mb-3">
+
+            <div class="selected-pub-cover">
+                {% if item.cover %}
+                <img src="{{ item.cover | relative_url }}" alt="{{ item.title }}">
+                {% else %}
+                <svg class="bubble-visual-hash w-100 h-100" data-bubble-visual-hash="{{ item.id }}" viewBox="0 0 300 200"></svg>
+                {% endif %}
+            </div>
+
+            <div class="p-4 d-flex flex-column justify-content-between selected-pub-body">
+                <div>
+                    <div class="mb-2 selected-pub-venue-row">
+                        {% if item.pub %}
+                        <span class="selected-pub-venue-badge">
+                            {{ item.pub_pre }}{{ item.pub }}{{ item.pub_post }}
+                        </span>
+                        {% endif %}
+                        {% if item.pub_date %}
+                        <span class="selected-pub-year">{{ item.pub_date }}</span>
+                        {% endif %}
+                        {{ item.pub_last }}
+                    </div>
+
+                    <h5 class="selected-pub-title">{{ item.title }}</h5>
+
+                    {% if item.abstract %}
+                    <p class="selected-pub-abstract">{{ item.abstract }}</p>
+                    {% endif %}
+                </div>
+
+                <div>
+                    <p class="selected-pub-authors">
+                        {% include widgets/author_list.html authors=item.authors %}
+                    </p>
+
+                    {% if item.links %}
+                    <p class="selected-pub-links">
+                        {% for link in item.links %}
+                        {% if link[1].url %}
+                        <a target="{{ link[1]['target'] }}" href="{{ link[1]['url'] }}" class="mr-2">[{{ link[0] }}]</a>
+                        {% else %}
+                        <a target="_blank" href="{{ link[1] }}" class="mr-2">[{{ link[0] }}]</a>
+                        {% endif %}
+                        {% endfor %}
+                    </p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
     <h6 class="d-block p-3 mt-0 text-right">
         <a href="{{ 'publications' | relative_url }}">All publications <i class="fas fa-angle-double-right"></i></a>
     </h6>
 </div>
-

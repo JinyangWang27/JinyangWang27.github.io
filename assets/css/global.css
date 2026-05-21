@@ -43,9 +43,10 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .navbar {
-    background-color: rgba(255, 255, 255, 0.6) !important;
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    background-color: rgba(10, 14, 26, 0.55) !important;
+    backdrop-filter: blur(18px) saturate(150%);
+    -webkit-backdrop-filter: blur(18px) saturate(150%);
+    border-bottom: 1px solid rgba(0, 229, 204, 0.15);
 }
 
 .inline-badge {
@@ -90,4 +91,665 @@ div.lazy {
 
 .email-text {
     font-family: Source Code Pro, monospace;
+}
+
+/* ---------- Hero card (homepage profile) ---------- */
+.hero-card {
+    border-radius: 14px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0f1626 0%, #1a2236 55%, #0d2436 100%);
+    color: #e2e8f0;
+    border: 1px solid rgba(0, 229, 204, 0.18);
+    position: relative;
+}
+
+.hero-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(0, 229, 204, 0.12), transparent 45%),
+        radial-gradient(circle at 85% 80%, rgba(144, 205, 244, 0.10), transparent 50%);
+    pointer-events: none;
+}
+
+.hero-card-body {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-name {
+    font-family: "Raleway", "Lato", sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #ffffff;
+    margin-bottom: 0.4rem;
+}
+
+.hero-name-secondary {
+    color: #90cdf4;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+}
+
+.hero-typewriter-wrap {
+    font-size: 1.05rem;
+    font-weight: 500;
+    min-height: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.hero-typewriter {
+    color: #00e5cc;
+}
+
+.hero-tw-cursor {
+    color: #00e5cc;
+    animation: hero-blink 1s steps(2, start) infinite;
+}
+
+@keyframes hero-blink {
+    to { visibility: hidden; }
+}
+
+.hero-position {
+    color: #90cdf4;
+    font-size: 0.9rem;
+    margin-bottom: 1.1rem;
+}
+
+.hero-bio {
+    color: #cbd5e0;
+    font-size: 0.9rem;
+    line-height: 1.75;
+}
+
+.hero-bio p {
+    margin-bottom: 0.75rem;
+}
+
+.hero-bio strong {
+    color: #e2e8f0;
+}
+
+.hero-bio a,
+.hero-cv-link,
+.hero-social-link {
+    color: #00e5cc;
+}
+
+.hero-bio a:hover,
+.hero-cv-link:hover {
+    color: #4fffe5;
+    text-decoration: underline;
+}
+
+.hero-cv-link {
+    font-size: 0.9rem;
+}
+
+.hero-portrait-frame {
+    position: relative;
+    display: inline-block;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 2px solid rgba(0, 229, 204, 0.45);
+    box-shadow: 0 0 40px rgba(0, 229, 204, 0.2);
+}
+
+.hero-portrait-img {
+    height: 210px;
+    display: block;
+    object-fit: cover;
+}
+
+.hero-stats-row {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero-stat-value {
+    color: #00e5cc;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.hero-stat-label {
+    color: #718096;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 4px;
+}
+
+.hero-social-row {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hero-social-link {
+    color: #a0aec0 !important;
+    font-size: 0.85rem;
+}
+
+.hero-social-link:hover {
+    color: #00e5cc !important;
+    text-decoration: none;
+}
+
+/* ---------- Selected publications card ---------- */
+.selected-pubs-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.selected-pubs-title {
+    font-size: 1rem;
+}
+
+.selected-pubs-viewall {
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.selected-pub-item {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.09);
+    background: #fff;
+    min-height: 200px;
+}
+
+.selected-pub-cover {
+    flex: 0 0 300px;
+    max-width: 300px;
+    min-height: 200px;
+    background: #e8e8e8;
+    overflow: hidden;
+}
+
+.selected-pub-cover img,
+.selected-pub-cover svg {
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+@media (max-width: 767.98px) {
+    .selected-pub-cover {
+        max-width: 100%;
+        flex: 0 0 auto;
+    }
+}
+
+.selected-pub-body {
+    flex: 1;
+}
+
+.selected-pub-venue-badge {
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: #fff;
+    background: #2c5282;
+    border-radius: 4px;
+    padding: 3px 10px;
+    display: inline-block;
+}
+
+.selected-pub-year {
+    font-size: 0.74rem;
+    color: #888;
+    margin-left: 6px;
+}
+
+.selected-pub-title {
+    font-size: 1.08rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #1a202c;
+    margin-bottom: 0.6rem;
+}
+
+.selected-pub-abstract {
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: #4a5568;
+    margin-bottom: 0.75rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.selected-pub-authors {
+    font-size: 0.78rem;
+    color: #718096;
+    margin-bottom: 0.5rem;
+}
+
+.selected-pub-links {
+    font-size: 0.83rem;
+    margin: 0;
+}
+
+/* ============================================================
+   Futuristic AI theme — glassmorphic + animated background
+   ============================================================ */
+
+:root {
+    --ai-bg-0: #060912;
+    --ai-bg-1: #0b1024;
+    --ai-bg-2: #11163a;
+    --ai-accent: #00e5cc;
+    --ai-accent-2: #7c5cff;
+    --ai-accent-3: #ff4dcd;
+    --ai-text: #e6edf7;
+    --ai-text-dim: #9aa7c2;
+    --ai-glass-bg: rgba(20, 28, 56, 0.62);
+    --ai-glass-border: rgba(124, 156, 220, 0.28);
+    --ai-glass-border-strong: rgba(0, 229, 204, 0.42);
+}
+
+html, body.site-body {
+    background: var(--ai-bg-0);
+    color: var(--ai-text);
+}
+
+body.site-body {
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Animated aurora background ---------------------------------- */
+.aurora-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    background:
+        radial-gradient(1200px 700px at 80% -10%, rgba(124, 92, 255, 0.18), transparent 60%),
+        radial-gradient(900px 600px at -10% 30%, rgba(0, 229, 204, 0.14), transparent 65%),
+        radial-gradient(900px 700px at 50% 110%, rgba(255, 77, 205, 0.12), transparent 60%),
+        linear-gradient(180deg, var(--ai-bg-0) 0%, var(--ai-bg-1) 60%, var(--ai-bg-2) 100%);
+}
+
+.aurora-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.85;
+    will-change: transform;
+}
+
+.aurora-blob-1 {
+    width: 520px; height: 520px;
+    left: -120px; top: 6%;
+    background: radial-gradient(circle, rgba(0, 229, 204, 0.45), transparent 65%);
+    animation: aurora-float-1 22s ease-in-out infinite alternate;
+}
+
+.aurora-blob-2 {
+    width: 620px; height: 620px;
+    right: -160px; top: 28%;
+    background: radial-gradient(circle, rgba(124, 92, 255, 0.45), transparent 65%);
+    animation: aurora-float-2 28s ease-in-out infinite alternate;
+}
+
+.aurora-blob-3 {
+    width: 560px; height: 560px;
+    left: 30%; bottom: -180px;
+    background: radial-gradient(circle, rgba(255, 77, 205, 0.35), transparent 65%);
+    animation: aurora-float-3 32s ease-in-out infinite alternate;
+}
+
+@keyframes aurora-float-1 {
+    0%   { transform: translate(0, 0)       scale(1);    }
+    100% { transform: translate(120px, 60px) scale(1.15); }
+}
+@keyframes aurora-float-2 {
+    0%   { transform: translate(0, 0)        scale(1);    }
+    100% { transform: translate(-140px, 80px) scale(1.1); }
+}
+@keyframes aurora-float-3 {
+    0%   { transform: translate(0, 0)        scale(1);    }
+    100% { transform: translate(80px, -100px) scale(1.2); }
+}
+
+.aurora-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(160, 200, 255, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(160, 200, 255, 0.045) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(ellipse at 50% 30%, #000 30%, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse at 50% 30%, #000 30%, transparent 75%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .aurora-blob { animation: none; }
+}
+
+/* Navbar dark glass ------------------------------------------- */
+.site-navbar .navbar-brand,
+.site-navbar .navbar-brand strong {
+    color: #ffffff;
+    letter-spacing: 0.04em;
+}
+
+.site-navbar .navbar-brand strong {
+    background: linear-gradient(90deg, var(--ai-accent) 0%, var(--ai-accent-2) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.site-navbar .nav-link {
+    color: rgba(230, 237, 247, 0.78) !important;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    position: relative;
+    padding-left: 0.9rem !important;
+    padding-right: 0.9rem !important;
+}
+
+.site-navbar .nav-link:hover {
+    color: var(--ai-accent) !important;
+}
+
+.site-navbar .nav-item.active .nav-link {
+    color: #ffffff !important;
+}
+
+.site-navbar .nav-item.active .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0.9rem; right: 0.9rem; bottom: 4px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--ai-accent), var(--ai-accent-2));
+    border-radius: 2px;
+    box-shadow: 0 0 12px rgba(0, 229, 204, 0.5);
+}
+
+/* Glass cards — universal override for white/light surfaces --- */
+.bg-white,
+.bg-light,
+.card,
+.selected-pubs-card,
+.rounded-xl.bg-white,
+.rounded-xl[class*="shadow"] {
+    background:
+        linear-gradient(135deg, rgba(30, 42, 84, 0.78) 0%, rgba(18, 24, 50, 0.78) 100%) !important;
+    color: var(--ai-text);
+    border: 1px solid var(--ai-glass-border) !important;
+    border-radius: 14px !important;
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    position: relative;
+}
+
+.card.border-0,
+.card.border-0.bg-white {
+    border: 1px solid var(--ai-glass-border) !important;
+}
+
+/* Subtle top edge highlight on cards */
+.bg-white::before,
+.card::before,
+.selected-pubs-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent 30%);
+}
+
+/* Hero card already has its own ::before — exclude to avoid stacking */
+.hero-card::before {
+    background:
+        radial-gradient(circle at 15% 20%, rgba(0, 229, 204, 0.14), transparent 50%),
+        radial-gradient(circle at 85% 80%, rgba(124, 92, 255, 0.16), transparent 55%) !important;
+}
+
+.shadow-sm {
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.04) inset,
+        0 10px 30px rgba(0, 0, 0, 0.35),
+        0 0 0 1px rgba(124, 156, 220, 0.06) !important;
+}
+
+.border-bottom,
+.border-top,
+.border-gray {
+    border-color: rgba(124, 156, 220, 0.18) !important;
+}
+
+/* Typography on dark ------------------------------------------ */
+body.site-body h1,
+body.site-body h2,
+body.site-body h3,
+body.site-body h4,
+body.site-body h5,
+body.site-body h6 {
+    color: #ffffff;
+    letter-spacing: -0.005em;
+}
+
+body.site-body h2 {
+    font-weight: 700;
+    background: linear-gradient(90deg, #ffffff 0%, #b9c5e0 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+body.site-body p,
+body.site-body li,
+body.site-body div {
+    color: inherit;
+}
+
+body.site-body .text-muted {
+    color: var(--ai-text-dim) !important;
+}
+
+body.site-body a {
+    color: var(--ai-accent);
+}
+
+body.site-body a:hover {
+    color: #4fffe5;
+}
+
+/* Sticky year nav-pills (publications/blog) ------------------- */
+.nav-pills .nav-link {
+    color: var(--ai-text-dim);
+    border-radius: 8px;
+    padding: 0.35rem 0.75rem;
+    font-size: 0.85rem;
+}
+
+.nav-pills .nav-link.active {
+    background: linear-gradient(135deg, rgba(0, 229, 204, 0.18), rgba(124, 92, 255, 0.18));
+    color: #ffffff;
+    border: 1px solid var(--ai-glass-border-strong);
+    box-shadow: 0 0 14px rgba(0, 229, 204, 0.18);
+}
+
+.nav-pills .nav-link:hover {
+    color: var(--ai-accent);
+}
+
+/* Section anchors (year headings) ----------------------------- */
+body.site-body h2[id^="year-"] {
+    position: relative;
+    padding-left: 1rem;
+}
+
+body.site-body h2[id^="year-"]::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 14%; bottom: 14%;
+    width: 4px;
+    background: linear-gradient(180deg, var(--ai-accent), var(--ai-accent-2));
+    border-radius: 4px;
+    box-shadow: 0 0 12px rgba(0, 229, 204, 0.4);
+}
+
+/* Hero card — sharpen the existing dark card ------------------ */
+.hero-card {
+    background:
+        radial-gradient(circle at 15% 20%, rgba(0, 229, 204, 0.14), transparent 50%),
+        radial-gradient(circle at 85% 80%, rgba(124, 92, 255, 0.16), transparent 55%),
+        linear-gradient(135deg, rgba(15, 22, 38, 0.78) 0%, rgba(26, 34, 54, 0.78) 55%, rgba(13, 36, 54, 0.78) 100%) !important;
+    border: 1px solid var(--ai-glass-border-strong) !important;
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(0, 229, 204, 0.08),
+        0 0 60px -10px rgba(124, 92, 255, 0.25);
+}
+
+.hero-name {
+    background: linear-gradient(90deg, #ffffff 0%, #cde6ff 60%, var(--ai-accent) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent !important;
+}
+
+.hero-typewriter-wrap {
+    font-family: "Source Code Pro", "Fira Sans", monospace;
+    letter-spacing: 0.02em;
+}
+
+.hero-portrait-frame {
+    border: 2px solid transparent;
+    background:
+        linear-gradient(rgba(10, 14, 26, 0.6), rgba(10, 14, 26, 0.6)) padding-box,
+        linear-gradient(135deg, var(--ai-accent), var(--ai-accent-2), var(--ai-accent-3)) border-box;
+    box-shadow: 0 0 50px rgba(0, 229, 204, 0.25);
+}
+
+.hero-stat-value {
+    background: linear-gradient(90deg, var(--ai-accent), var(--ai-accent-2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Selected publications card — readable on dark -------------- */
+.selected-pub-item {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid var(--ai-glass-border);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.selected-pub-item:hover {
+    transform: translateY(-2px);
+    border-color: var(--ai-glass-border-strong);
+    box-shadow:
+        0 12px 36px rgba(0, 0, 0, 0.45),
+        0 0 30px -8px rgba(0, 229, 204, 0.25);
+}
+
+.selected-pub-cover {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.selected-pub-title {
+    color: #ffffff;
+}
+
+.selected-pub-abstract {
+    color: var(--ai-text-dim);
+}
+
+.selected-pub-authors {
+    color: var(--ai-text-dim);
+}
+
+.selected-pub-venue-badge {
+    background: linear-gradient(135deg, rgba(0, 229, 204, 0.18), rgba(124, 92, 255, 0.25)) !important;
+    color: #eafffb !important;
+    border: 1px solid var(--ai-glass-border-strong);
+    text-transform: uppercase;
+}
+
+.selected-pub-year {
+    color: var(--ai-text-dim);
+}
+
+.selected-pub-links a {
+    color: var(--ai-accent);
+}
+
+/* Publications & blog list items (per-year cards) ------------ */
+.rounded-xl {
+    border-radius: 14px !important;
+}
+
+.rounded-xl .row {
+    transition: background-color 180ms ease;
+}
+
+.rounded-xl .row:hover {
+    background-color: rgba(0, 229, 204, 0.04);
+}
+
+/* Footer ------------------------------------------------------ */
+.footer {
+    background: rgba(10, 14, 26, 0.55) !important;
+    border-top: 1px solid var(--ai-glass-border) !important;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    color: var(--ai-text-dim);
+}
+
+.footer .text-muted {
+    color: var(--ai-text-dim) !important;
+}
+
+/* Code / inline mono ----------------------------------------- */
+.email-text {
+    color: var(--ai-accent);
+}
+
+/* Scrollbar (webkit) ----------------------------------------- */
+body.site-body ::-webkit-scrollbar {
+    width: 10px; height: 10px;
+}
+body.site-body ::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.02);
+}
+body.site-body ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, rgba(0, 229, 204, 0.4), rgba(124, 92, 255, 0.4));
+    border-radius: 10px;
+}
+
+/* Selection -------------------------------------------------- */
+body.site-body ::selection {
+    background: rgba(0, 229, 204, 0.35);
+    color: #ffffff;
+}
+
+/* Peer review count badge ------------------------------------ */
+.peer-review-count {
+    background: linear-gradient(135deg, rgba(0, 229, 204, 0.22), rgba(124, 92, 255, 0.28));
+    border: 1px solid var(--ai-glass-border-strong);
+    color: #eafffb;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.15em 0.55em;
+    letter-spacing: 0.02em;
 }
