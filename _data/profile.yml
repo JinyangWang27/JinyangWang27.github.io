@@ -2,6 +2,28 @@ primary_name: "Jinyang Wang"
 secondary_name: ""
 navbar_name: "Jinyang Wang"
 
+# Cycling phrases shown via typewriter on the hero card.
+tagline_phrases:
+  - "Quantitative Finance"
+  - "Data Pipelines at Scale"
+  - "ML & Reinforcement Learning"
+  - "LLM & RAG Applications"
+  - "Cloud-Native Modelling"
+
+# Primary highlighted role shown under the typewriter.
+primary_position: "Dredging Development Modeller @ NMDC Group, Abu Dhabi"
+
+# Numbers shown in the stats strip on the hero card.
+stats:
+  - value: "5+"
+    label: "Years Industry"
+  - value: "290k+"
+    label: "GitHub Stars"
+  - value: "3"
+    label: "Degrees"
+  - value: "2"
+    label: "Continents"
+
 positions:
 - name: Dredging Development Modeller
 - name: NMDC Group

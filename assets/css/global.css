@@ -91,3 +91,248 @@ div.lazy {
 .email-text {
     font-family: Source Code Pro, monospace;
 }
+
+/* ---------- Hero card (homepage profile) ---------- */
+.hero-card {
+    border-radius: 14px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0f1626 0%, #1a2236 55%, #0d2436 100%);
+    color: #e2e8f0;
+    border: 1px solid rgba(0, 229, 204, 0.18);
+    position: relative;
+}
+
+.hero-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(0, 229, 204, 0.12), transparent 45%),
+        radial-gradient(circle at 85% 80%, rgba(144, 205, 244, 0.10), transparent 50%);
+    pointer-events: none;
+}
+
+.hero-card-body {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-name {
+    font-family: "Raleway", "Lato", sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #ffffff;
+    margin-bottom: 0.4rem;
+}
+
+.hero-name-secondary {
+    color: #90cdf4;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+}
+
+.hero-typewriter-wrap {
+    font-size: 1.05rem;
+    font-weight: 500;
+    min-height: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.hero-typewriter {
+    color: #00e5cc;
+}
+
+.hero-tw-cursor {
+    color: #00e5cc;
+    animation: hero-blink 1s steps(2, start) infinite;
+}
+
+@keyframes hero-blink {
+    to { visibility: hidden; }
+}
+
+.hero-position {
+    color: #90cdf4;
+    font-size: 0.9rem;
+    margin-bottom: 1.1rem;
+}
+
+.hero-bio {
+    color: #cbd5e0;
+    font-size: 0.9rem;
+    line-height: 1.75;
+}
+
+.hero-bio p {
+    margin-bottom: 0.75rem;
+}
+
+.hero-bio strong {
+    color: #e2e8f0;
+}
+
+.hero-bio a,
+.hero-cv-link,
+.hero-social-link {
+    color: #00e5cc;
+}
+
+.hero-bio a:hover,
+.hero-cv-link:hover {
+    color: #4fffe5;
+    text-decoration: underline;
+}
+
+.hero-cv-link {
+    font-size: 0.9rem;
+}
+
+.hero-portrait-frame {
+    position: relative;
+    display: inline-block;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 2px solid rgba(0, 229, 204, 0.45);
+    box-shadow: 0 0 40px rgba(0, 229, 204, 0.2);
+}
+
+.hero-portrait-img {
+    height: 210px;
+    display: block;
+    object-fit: cover;
+}
+
+.hero-stats-row {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero-stat-value {
+    color: #00e5cc;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.hero-stat-label {
+    color: #718096;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 4px;
+}
+
+.hero-social-row {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hero-social-link {
+    color: #a0aec0 !important;
+    font-size: 0.85rem;
+}
+
+.hero-social-link:hover {
+    color: #00e5cc !important;
+    text-decoration: none;
+}
+
+/* ---------- Selected publications card ---------- */
+.selected-pubs-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.selected-pubs-title {
+    font-size: 1rem;
+}
+
+.selected-pubs-viewall {
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.selected-pub-item {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.09);
+    background: #fff;
+    min-height: 200px;
+}
+
+.selected-pub-cover {
+    flex: 0 0 300px;
+    max-width: 300px;
+    min-height: 200px;
+    background: #e8e8e8;
+    overflow: hidden;
+}
+
+.selected-pub-cover img,
+.selected-pub-cover svg {
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+@media (max-width: 767.98px) {
+    .selected-pub-cover {
+        max-width: 100%;
+        flex: 0 0 auto;
+    }
+}
+
+.selected-pub-body {
+    flex: 1;
+}
+
+.selected-pub-venue-badge {
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: #fff;
+    background: #2c5282;
+    border-radius: 4px;
+    padding: 3px 10px;
+    display: inline-block;
+}
+
+.selected-pub-year {
+    font-size: 0.74rem;
+    color: #888;
+    margin-left: 6px;
+}
+
+.selected-pub-title {
+    font-size: 1.08rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #1a202c;
+    margin-bottom: 0.6rem;
+}
+
+.selected-pub-abstract {
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: #4a5568;
+    margin-bottom: 0.75rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.selected-pub-authors {
+    font-size: 0.78rem;
+    color: #718096;
+    margin-bottom: 0.5rem;
+}
+
+.selected-pub-links {
+    font-size: 0.83rem;
+    margin: 0;
+}
