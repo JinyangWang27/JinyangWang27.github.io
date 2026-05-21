@@ -16,7 +16,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ '/assets/css/global.css' | relative_url }}">
 </head>
-<body class="bg-light" {{ page.body_attr }}>
+<body class="site-body" {{ page.body_attr }}>
+    <div class="aurora-bg" aria-hidden="true">
+        <div class="aurora-blob aurora-blob-1"></div>
+        <div class="aurora-blob aurora-blob-2"></div>
+        <div class="aurora-blob aurora-blob-3"></div>
+        <div class="aurora-grid"></div>
+    </div>
     {% include navbar.html %}
     <div class="{% if page.container_class %}{{ page.container_class }}{% else %}container-lg{% endif %}">
         {{content}}
