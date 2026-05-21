@@ -1,11 +1,11 @@
-primary_name: "Your Name"
+primary_name: "Jinyang Wang"
 secondary_name: ""
-navbar_name: "Your Name"
+navbar_name: "Jinyang Wang"
 
 positions:
-- name: Title or Position
-- name: Affiliation Name
-  logo: /assets/images/badges/MIT_Social_circle.png  # Logo is optional
+- name: Dredging Development Modeller
+- name: NMDC Group
+  # logo: /assets/images/badges/MIT_Social_circle.png  # Logo is optional
 
 
 email: "jinyang.wang27@outlook.com"
@@ -22,27 +22,25 @@ github: JinyangWang27
 short_bio_text_justify: false
 short_bio: >-
   <p>
-    A <a href="https://en.wikipedia.org/wiki/Bicolor_cat" target="_blank">bicolor cat</a> is a cat with white fur combined with fur of some other colour, for example solid black, tabby, or colourpointed.
+    Ph.D. physicist with a mathematics background (MSc Mathematics, BSc Applied Mathematics) and  3+ years in quantitative finance at Rabobank, building data pipelines, pricing libraries, and ML models on large-scale financial datasets. Experienced in cloud deployment (Databricks, Azure), LLM/RAG applications, and reinforcement learning. Maintainer of Awesome Python (290k+ GitHub stars).
   </p>
   <p>
-    There are various patterns of a bicolour cat. These range from the Van-patterned (colour on the crown of the head 
-    and the tail only) to a solid colour with a throat locket or medallion. Bicolour coats are found in many cat breeds, 
-    as well as being common in domestic longhair and domestic shorthair cats.
+    CFA Level 2 candidate, PMP
   </p>
 
 portrait_url: /assets/images/photos/portrait.jpg
-portrait_caption: >-
-  Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
+# portrait_caption: >-
+#   Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
 
 education:
 - name: Utrecht University
-  logo: /assets/images/badges/Utrecht_University.png
+  logo: /assets/images/badges/UU.png
   position: >- 
     Department of Physics <br/>
     Ph.D. Student
   date: Mar. 2018 - May. 2022
 - name: University of Exeter
-  logo: /assets/images/badges/PKU_red.png
+  logo: /assets/images/badges/uoe.png
   position: M.Sc. in Mathematics
   date: Sep. 2016 - Aug. 2017
 - name: University of Liverpool
@@ -50,8 +48,8 @@ education:
   position: B.Sc. in Applied Mathematics
   date: Sep. 2011 - Aug. 2016
 
-# experience:
-# - name: Peking University
-#   logo: /assets/images/badges/PKU_red.png
-#   position: Research Intern
-#   date: Sep. 2019 - Jul. 2021
+experience:
+- name: Rabobank
+  logo: /assets/images/badges/rabo.png
+  position: Quantitative Researcher / Treasury Modeller
+  date: Oct. 2022 - Sep. 2025
