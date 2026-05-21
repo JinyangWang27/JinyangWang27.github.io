@@ -63,9 +63,11 @@ education:
   logo: /assets/images/badges/uoe.png
   position: M.Sc. in Mathematics
   date: Sep. 2016 - Aug. 2017
-- name: University of Liverpool
+- name: Xi'an Jiaotong-Liverpool University
   logo: /assets/images/badges/uol.png
-  position: B.Sc. in Applied Mathematics
+  position: >-
+    B.Sc. in Applied Mathematics <br/>
+    Double degree with University of Liverpool
   date: Sep. 2011 - Aug. 2016
 
 experience:
