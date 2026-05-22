@@ -4,6 +4,7 @@ title : Blog
 navbar_title: Blog
 body_attr: >-
   data-spy="scroll" data-target="#navbar-year" data-offset="100"
+published: false
 ---
 
 {% assign blogs_by_year = site.posts | sort: "date" | reverse | group_by_exp: "item", "item.date | date: '%Y'" %}
