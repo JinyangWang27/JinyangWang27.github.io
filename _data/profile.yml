@@ -4,6 +4,7 @@ navbar_name: "Jinyang Wang"
 
 # Cycling phrases shown via typewriter on the hero card.
 tagline_phrases:
+  - "AI Engineering"
   - "Quantitative Finance"
   - "Data Pipelines at Scale"
   - "ML & Reinforcement Learning"
@@ -11,7 +12,7 @@ tagline_phrases:
   - "Cloud-Native Modelling"
 
 # Primary highlighted role shown under the typewriter.
-primary_position: "Dredging Development Modeller @ NMDC Group, Abu Dhabi"
+primary_position: "AI Engineer @ Presight"
 
 # Numbers shown in the stats strip on the hero card.
 stats:
@@ -23,8 +24,8 @@ stats:
     label: "Continents"
 
 positions:
-- name: Dredging Development Modeller
-- name: NMDC Group
+- name: AI Engineer
+- name: Presight
   # logo: /assets/images/badges/MIT_Social_circle.png  # Logo is optional
 
 
@@ -42,7 +43,7 @@ orcid: 0000-0002-9050-5736
 short_bio_text_justify: false
 short_bio: >-
   <p>
-    Ph.D. physicist with a mathematics background and 3+ years in quantitative finance at Rabobank, building data pipelines, pricing libraries, and ML models on large-scale financial datasets. Experienced in cloud deployment (Databricks, Azure), LLM/RAG applications, and reinforcement learning. Maintainer of Awesome Python (290k+ GitHub stars).
+    AI Engineer at Presight and Ph.D. physicist with a mathematics background and 3+ years in quantitative finance at Rabobank, building data pipelines, pricing libraries, and ML models on large-scale financial datasets. Experienced in cloud deployment (Databricks, Azure), LLM/RAG applications, and reinforcement learning. Maintainer of Awesome Python (290k+ GitHub stars).
   </p>
   <p>
     CFA Level 2 candidate, PMP
@@ -71,6 +72,12 @@ education:
   date: Sep. 2011 - Aug. 2016
 
 experience:
+- name: Presight
+  position: AI Engineer
+  date: Oct. 2026 - Present
+- name: NMDC Group
+  position: Dredging Development Modeller
+  date: Oct. 2025 - Oct. 2026
 - name: Rabobank
   logo: /assets/images/badges/rabo.png
   position: Quantitative Researcher / Treasury Modeller
