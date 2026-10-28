@@ -43,7 +43,7 @@ orcid: 0000-0002-9050-5736
 short_bio_text_justify: false
 short_bio: >-
   <p>
-    AI Engineer at Presight and Ph.D. physicist with a mathematics background and 3+ years in quantitative finance at Rabobank, building data pipelines, pricing libraries, and ML models on large-scale financial datasets. Experienced in cloud deployment (Databricks, Azure), LLM/RAG applications, and reinforcement learning. Maintainer of Awesome Python (290k+ GitHub stars).
+    AI Engineer at Presight and Ph.D. physicist with a mathematics background and 3+ years in quantitative finance at Rabobank, building data pipelines, pricing libraries, and ML models on large-scale financial datasets. Experienced in cloud deployment (Databricks, Azure), LLM/RAG applications, and reinforcement learning. Maintainer of Awesome Python (290k+ GitHub stars). Creator of open-source projects including <a href="https://github.com/JinyangWang27/people-context">people-context</a>, <a href="https://github.com/JinyangWang27/realm-kit">RealmKit</a> and <a href="https://github.com/JinyangWang27/awesome-chinese-metaphysics">Awesome Chinese Metaphysics</a>.
   </p>
   <p>
     CFA Level 2 candidate, PMP
